@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="left">
+            <a href="#" onclick="window.location.reload();">Agoulzi Mohamed</a>
+        </div>
+
+        <div class="right">
+            <a href="https://github.com/Mohamedagoulzi" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/agoulzi-mohamed-8206b3313/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Linkedin</span>
+            </a>
+
+            <a href="mailto:med.agoulzi@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECTION 1: descreption -->
+        <section class="hero-section">
+            <div class="text">
+                <h2>hey there, I'm Mohamed 👋</h2>
+                <p class ="descr">I am a Software and Data Engineering student at ENSA Khouribga.</p>
+                <p>Welcome to my portfolio! 👋 I am deeply passionate about application development, data analysis, and project management.
+                Through various academic and personal projects, I have gained expertise in technologies such as Java, JavaScript,
+                python, and more. I thrive on learning new skills, solving complex problems, and creating
+                innovative solutions that make an impact. Thank you for visiting my portfolio—I hope you enjoy exploring my work and
+                projects! 🚀 Let's build the future together. Happy coding! 🧑🏻‍💻</p>
+
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+
+                    <a href="#projects">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <span>Projets</span>
+                    </a>
+
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="headshot">
+                <img src="images/mohamed1.jpg" alt="john doe headshot">
+            </div>
+        </section>
+
+        <!-- SECTION 2: Skills -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                Technologies and tools I use to build applications and solve problems.
+            </div>
+
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="html logo">
+                    <span>HTML</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="css logo">
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="javascript logo">
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/icons8-python-96.png" alt="node logo">
+                    <span>python</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/icons8-java-logo-96.png" alt="react logo">
+                    <span>java</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Projets -->
+        <section id="projects" class="projects-section">
+            <h2>Projets</h2>
+            <div class="text">
+                Voici quelques-uns des projets sur lesquels j'ai travaillé. Chaque projet m'a permis d'acquérir de nouvelles
+                compétences et de relever des défis techniques.
+            </div>
+        
+            <div class="project-cards">
+                <div class="card">
+                    <img src="images/compagnieaerienne.jpg" alt="Projet 1">
+                    <h3>Projet 1</h3>
+                    <p>Description du projet 1. Ce projet m'a permis de travailler avec des technologies comme Html,css, JavaScript et
+                        PHP.</p>
+                    <a href="#" target="_blank">Voir le projet</a>
+                </div>
+        
+                <div class="card">
+                    <img src="project2.webp" alt="Projet 2">
+                    <h3>Projet 2</h3>
+                    <p>Description du projet 2. J'ai utilisé Python et des outils de data analysis pour ce projet.</p>
+                    <a href="#" target="_blank">Voir le projet</a>
+                </div>
+        
+                <div class="card">
+                    <img src="project3.webp" alt="Projet 3">
+                    <h3>Projet 3</h3>
+                    <p>Description du projet 3. Ce projet impliquait du développement web avec React.js et Spring Boot.</p>
+                    <a href="#" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Contact -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="group">
+                <div class="text">
+                    Let's Connect<br>
+                    Have a question or want to work together? We'd love to hear from you. Our team is always here to help.
+                </div>
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
