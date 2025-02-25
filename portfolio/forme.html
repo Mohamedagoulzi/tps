@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="firstname">firstname:</label>
+        <input type="text" id="firstname" name ="firstname" required>
+        <span id="firstnameError" class="error"></span><br><br>
+        
+        <label for="lastname">lastname:</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <span id="lastnameError" class="error"></span><br><br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span><br><br>
+
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError" class="error"></span><br><br>
+
+        <label for="telephone">telephone:</label>
+        <input type="tel" id="telephone" name="telephone" inputmode="numeric" required>
+        <span id="telephoneError" class="error"></span><br><br>
+
+        <!-- Dropdown for gender -->
+        <label for="gender">gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">--Select Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <span id="genderError" class="error"></span><br><br>
+
+        <!-- Date input for date of birth -->
+        <label for="datebirth">date birth:</label>
+        <input type="date" id="datebirth" name="datebirth" required>
+        <span id="datebirthError" class="error"></span><br><br>
+
+        <button type="submit">submit</button>
+    </form>
+
+<script>
+    function validateForm() {
+    let isValid = true;
+
+    // Clear previous error messages
+    document.querySelectorAll(".error").forEach(span => span.textContent = "");
+
+    // Get the values from the form
+    let firstname = document.getElementById("firstname").value.trim();
+    let lastname = document.getElementById("lastname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let telephone = document.getElementById("telephone").value.trim();
+    let gender = document.getElementById("gender").value.trim();
+    let datebirth = document.getElementById("datebirth").value.trim();
+
+    // Regular expression to check that name contains only letters (no numbers)
+    let namePattern = /^[A-Za-z]+$/;
+    
+    // Validate Firstname (no numbers, at least 2 characters)
+    if (!namePattern.test(firstname)) {
+        document.getElementById("firstnameError").textContent = "Firstname must only contain letters and be at least 2 characters long";
+        isValid = false;
+    }
+
+    // Validate Lastname (no numbers, at least 2 characters)
+    if (!namePattern.test(lastname)) {
+        document.getElementById("lastnameError").textContent = "Lastname must only contain letters and be at least 2 characters long";
+        isValid = false;
+    }
+
+    // Validate Email (basic email pattern check)
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Please enter a valid email address";
+        isValid = false;
+    }
+
+    // Validate Password (at least 8 characters)
+    if (password.length < 8) {
+        document.getElementById("passwordError").textContent = "Password must be at least 8 characters long";
+        isValid = false;
+    }
+
+    // Validate Telephone (must be exactly 10 digits and contain only numbers)
+    let telephonePattern = /^\d{10}$/;
+    if (!telephonePattern.test(telephone)) {
+        document.getElementById("telephoneError").textContent = "Telephone must be 10 digits and contain only numbers";
+        isValid = false;
+    }
+
+    // Validate Gender (must be selected)
+    if (gender === "") {
+        document.getElementById("genderError").textContent = "Please select a gender";
+        isValid = false;
+    }
+
+    // Validate Date of Birth (must not be empty)
+    if (!datebirth) {
+        document.getElementById("datebirthError").textContent = "Please select a valid date of birth";
+        isValid = false;
+    }
+
+    // If the form is valid, display a success message
+    if (isValid) {
+        alert("Inscription avec succès !");
+    }
+
+    return isValid;
+}
+
+
+</script>   
+</body>
+</html>
